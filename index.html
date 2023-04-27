@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgba(49, 146, 62, 0.527);
+        font-family: sans-serif;
+    }
+
+    .container, .paradas {
+        background-color: white;
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        padding: 2em 0;
+        margin: 2em auto;
+        border-radius: 8px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06);
+    }
+    
+    button {
+        margin: .5em;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    p {
+        margin: .5em 0;
+        font-size: 28px;
+    }
+
+    .iniciar {
+        background-color: rgb(96, 221, 96);
+        color: white;
+        opacity: 1;
+    }
+
+    .pause {
+        background-color: rgb(238, 80, 80);
+        color: white;
+        opacity: 1;
+    }
+
+    .zerar {
+        background-color: rgb(184, 184, 184);
+        color: white;
+        opacity: 1;
+    }
+
+    .iniciar:active {
+        transform: scale(1.1);
+        opacity: .5;
+    }
+
+    .pause:active {
+        transform: scale(1.1);
+        opacity: .5;
+    }
+
+    .zerar:active {
+        transform: scale(1.1);
+        opacity: .5;
+    }
+
+    .pausado {
+        color: red;
+    }
+
+    .horario-chegada {
+        font-size: 16px;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Cartão Ponto</h1>
+        <p class="relogio">00:00:00</p>
+        <button class="iniciar">Iniciar</button>
+        <button class="pause">Pause</button>
+        <button class="zerar">Fim de turno</button>
+    </div>
+
+    <div class="paradas">
+        <h2 class="registro-paradas">Registro de Paradas:</h2>
+        <P class="horario-chegada"></P>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
